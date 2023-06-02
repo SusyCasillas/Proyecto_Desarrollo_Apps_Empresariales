@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control Escolar</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="../CSS//mdb.min.css" />
+    <link rel="stylesheet" href="../CSS//style.css">
+    <link rel="icon" type="image/x-icon" href="../IMG/favicon.ico">   
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Navbar brand -->
+                <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                    <img src="../IMG/Logo.png" height="35" alt="MDB Logo" loading="lazy" />
+                </a>
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="listMenu">
+                    <!--li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li-->
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+                <!-- Icon -->
+
+
+                <!-- Notifications -->
+                <div class="dropdown">
+                    <a class="link-secondary me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger" id="numNotifications"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Avatar -->
+                <div class="dropdown">
+                    <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                        id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <img class="rounded-circle" height="25" loading="lazy" id="imgUser" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                        <li>
+                            <a class="dropdown-item" href="#">My profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="btnLogOut">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <br><br>
+    <!-- Formulario de Alta Profesor -->
+    <div class="container my-5">
+        <h3 class="mb-4 pb-2">Formulario de Alta de Profesor</h3>
+        <form>
+            <!-- Nombre(s) y Apellidos -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h6 class="mb-1 pb-1">Nombre(s)</h6>
+                    <div class="form-outline">
+                        <input type="text" id="nombre" class="form-control" required />
+                        <label class="form-label" for="nombre">Nombre(s)</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <h6 class="mb-1 pb-1">Apellido Paterno</h6>
+                    <div class="form-outline">
+                        <input type="text" id="apellidoPaterno" class="form-control" required />
+                        <label class="form-label" for="apellidoPaterno">Apellido Paterno</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h6 class="mb-1 pb-1">Apellido Materno</h6>
+                    <div class="form-outline">
+                        <input type="text" id="apellidoMaterno" class="form-control" required />
+                        <label class="form-label" for="apellidoMaterno">Apellido Materno</label>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <!-- Edad -->
+    <h6 class="mb-1 pb-1">Edad</h6>
+    <div class="form-outline mb-3">
+        <input type="number" id="edad" class="form-control" min="25" max="60" required />
+        <label class="form-label" for="edad">Edad</label>
+    </div>
+
+
+    <!-- Fotografía -->
+    <h6 class="mb-1 pb-1">Fotografía</h6>
+    <div class="form-outline mb-3">
+        <input type="file" id="foto" class="form-control" required />
+        <!-- <label class="form-label" for="foto">Fotografía</label> -->
+    </div>
+
+    <!-- Submit button -->
+    <button class="btn btn-primary btn-block mb-4" id="boton">Dar Alta</button>
+    </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright - Instituto Tecnológico de León - Derechos reservados.
+            <br><br>
+            <a class="text-reset fw-bold" href="http://www.itleon.edu.mx">Sitio oficial del Instituto Tecnológico de
+                León</a>
+            <br>
+            <br>
+            <p>Avenida Tecnológico S/N Fracc. Industrial Julián de Obregón C.P. 37290</p>
+            <p>Apdo. Postal No. 1-857 C.P. 37000 León, Gto. Tel. 01 (477) 7 10 52 00 Conmutador Fax 01 (477) 7 11 20 72
+            </p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="../JS/AltaProfesores.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+    <script src="../JS/GenericTools.js"></script>
+    <script src="../JS/index2.js"></script>
+</body>
+
+</html>
